@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width" initial-scale="1.0">
+    <meta charset="UTF-8">
+    <title>SSB Practice</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+
+    <style>
+        .pad{
+            padding-top: 5rem;
+            padding-bottom: 5rem;
+        }
+        #test, #home-btn{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+<nav class="navbar navbar-dark bg-primary">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="home.html"> SSB Practice </a>
+    </div>
+</nav>
+<div class="container-sm pad">
+<div class="jumbotron" id="intro">
+    <h1 class="display-4">Word Association Test</h1>
+    <p class="lead">60 words will be displayed on screen one after the other for 15 seconds each. Write a sentence for each word.</p>
+    <hr class="my-4">
+    <a class="btn btn-primary btn-lg" onclick="startTest(); getTest()" role="button">Start Test</a>
+</div>
+</div>
+<div class="container justify-content-center" id="test-container"><h1 id="test"></h1></div>
+<div class="container justify-content-center" id="home-btn">
+    <button  class="btn btn-primary btn-lg" onclick="getTest(); startTest()">Again</button>
+</div>
+<nav class="navbar fixed-bottom navbar-dark bg-dark">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#"></a>
+    </div>
+</nav>
+</body>
+<script>
+    function startTest(){
+        document.getElementById("intro").style.display ='none'
+        document.getElementById("test-container").style.display = 'flex'
+        document.getElementById("test").style.display = 'flex'
+        document.getElementById('test').innerText = "Test will start in 15 seconds"
+        document.getElementById('home-btn').style.display = 'none'
+    }
+    function getTest(){
+        let counter = 0
+        function changeWord(data){
+            let start_change = setInterval(change, 15000)
+            function change() {
+                counter++;
+                if (counter > 60) {
+                    document.getElementById('test').innerText = "Test is now over"
+                    document.getElementById('home-btn').style.display = 'flex'
+                    clearInterval(start_change)
+                } else {
+                    document.getElementById('test').innerText = data[counter]
+                }
+            }
+        }
+        fetch('http://127.0.0.1:8000/wat')
+            .then(function (response){
+                return response.json()
+            })
+            .then(function (data){
+                changeWord(data)
+            })
+            .catch(function (){
+                document.getElementById('test').innerHTML = "server error, kindly refresh"
+            })
+    }
+</script>
+</html>
