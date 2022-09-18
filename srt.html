@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <title>SSB Practice</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
-
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2045560541793123"
+    crossorigin="anonymous"></script>
     <style>
         .pad{
             padding-top: 5rem;
@@ -20,20 +21,112 @@
 <nav class="navbar navbar-dark bg-primary">
     <div class="container-fluid">
         <a class="navbar-brand" href="index.html"> SSB Practice </a>
+        <a class="btn btn-primary" type="button" data-bs-toggle="modal" data-bs-target="#aboutModal" href="about.html">About</a>
     </div>
 </nav>
 <div class="container-sm pad">
-    <div class="jumbotron" id="intro">
-        <h1 class="display-4">Situation Reaction Test</h1>
-        <p class="lead">60 situations will be displayed on screen one after the other for 30 seconds each. Write your reaction to each situation.</p>
-        <hr class="my-4">
-        <a class="btn btn-primary btn-lg" onclick="startTest(); getTest()" role="button">Start Test</a>
-    </div>
+<div class="jumbotron" id="intro">
+    <h1 class="display-4">Situation Reaction Test</h1>
+    <p class="lead">60 situations will be displayed on screen one after the other for 30 seconds each. Write your reaction to each situation.</p>
+    <p class="lead">In SSB you will be given 60 situations on a sheet of paper and will be asked to attempt as many as possible in the given time.</p>
+    <p class="lead">However, in Practice you must try attempting one by one each in 30 seconds so that the speed of your response becomes good and you can attempt all 60 in the SSB.</p>
+    <hr class="my-4">
+    <a class="btn btn-primary btn-lg" onclick="startTest(); getTest(); timer()" role="button">Start Test</a>
 </div>
+</div>
+
+
+
+
+</div>
+
 <div class="container justify-content-center" id="test-container"><h1 id="test"></h1></div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<div class="container" id="timer" style="display: none">
+    <div class="row">
+        <div class="col-sm">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Time Left</h5>
+                    <p class="card-text" id="time-left"></p>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Situations Left</h5>
+                    <p class="card-text" id="words-left"></p>
+                </div>
+            </div>
+        </div>
+        <audio id="audio">
+            <source src="https://www.soundjay.com/mechanical/sounds/camera-shutter-click-03.mp3" type="audio/mpeg">
+            Your Browser does not support the audio element.
+        </audio>
+    </div>
 <div class="container justify-content-center" id="home-btn">
     <button  class="btn btn-primary btn-lg" onclick="getTest(); startTest()">Again</button>
 </div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
 <nav class="navbar fixed-bottom navbar-dark bg-dark">
     <div class="container-fluid">
         <a class="navbar-brand" href="#"></a>
@@ -42,23 +135,29 @@
 </body>
 <script>
     function startTest(){
+        document.getElementById('timer').style.display = 'block';
         document.getElementById("intro").style.display ='none'
         document.getElementById("test-container").style.display = 'flex'
         document.getElementById("test").style.display = 'flex'
-        document.getElementById('test').innerText = "Test will start in 30 seconds"
+        document.getElementById('test').innerText = "Test will start in 30 seconds. Get ready"
         document.getElementById('home-btn').style.display = 'none'
+        
     }
+    let counter = 0
     function getTest(){
-        let counter = 0
+        
         function changeWord(data){
             let start_change = setInterval(change, 30000)
             function change() {
                 counter++;
+                
                 if (counter > 60) {
                     document.getElementById('test').innerText = "Test is now over"
                     document.getElementById('home-btn').style.display = 'flex'
+                    document.getElementById('timer').style.display = 'none'
                     clearInterval(start_change)
                 } else {
+                    document.getElementById('words-left').innerText = 60-counter
                     document.getElementById('test').innerText = data[counter]
                 }
             }
@@ -74,5 +173,28 @@
                 document.getElementById('test').innerHTML = "server error, kindly refresh"
             })
     }
+    function timer(){
+        let time = 30
+        let start_timer = setInterval(countdown, 1000)
+        function countdown(){
+            time--;
+            if (time <= 0){
+                time=30
+                document.getElementById('time-left').innerText = time
+                playAudio()
+            }else{
+                document.getElementById('time-left').innerText = time
+            }
+            if (counter > 60){
+                clearInterval(start_timer)
+            }
+        }
+    }
+    var x = document.getElementById("audio"); 
+
+function playAudio() { 
+  x.play(); 
+} 
+
 </script>
 </html>
