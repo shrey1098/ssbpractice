@@ -1,56 +1,899 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-202497702-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-202497702-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
 
-  gtag('config', 'UA-202497702-1');
-</script>
-
-    <meta name="viewport" content="width=device-width" initial-scale="1.0">
-    <meta charset="UTF-8">
-    <title>SSB Practice</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <style>
-        .pad{
-            margin-top: 2rem;
-        }
-    </style>
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2045560541793123"
+    gtag('config', 'UA-202497702-1');
+  </script>
+  <!--bootstrap-->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
     crossorigin="anonymous"></script>
+  <meta name="viewport" content="width=device-width" initial-scale="1.0">
+  <meta charset="UTF-8">
+  <title>SSB Practice</title>
 </head>
+
 <body>
-  <nav class="navbar navbar-dark bg-primary">
+  <!--navbar-->
+  <nav class="navbar navbar-dark" style="background-color: #3a3a2d;">
     <div class="container-fluid">
-      <a class="navbar-brand" href="index.html"> SSB Practice </a>
-      <!-- Nav bar button about-->
-      <a class="btn btn-primary" type="button" data-bs-toggle="modal" data-bs-target="#aboutModal" href="about.html">About</a>
+      <a class="navbar-brand" href="index.html">SSB Practice</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+        aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="tests.html">Practice Tests</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">About SSB</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="blog.html">Blog</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="ca.html">Current Affairs</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">Contact</a>
+          </li>
+        </ul>
+      </div>
     </div>
   </nav>
-  <!-- Maintainence message -->
-  <div class="alert alert-warning alert-dismissible fade show" role="alert">
-    <strong>Warning!</strong> This website is under maintainence. Some features may not work.
-    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-  </div>
-  <!-- center div Features will be back shortly-->
-  <div class="container">
-    <div class="row">
-      <div class="col-md-12">
-        <div class="jumbotron">
-          <h1 class="display-4">Features will be back shortly</h1>
-          <p class="lead">This website is under maintainence. Some features may not work.</p>
-          <hr class="my-4">
-          <p>Sorry for the inconvenience.</p>
-          
+
+  <!-- carousel -->
+  <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="false">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+        aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+        aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+        aria-label="Slide 3"></button>
+
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="./assets/1.png" class="d-block w-100" alt="ima">
+        <div class="carousel-caption">
+          <h5>Achieve your goal of becoming an Indian Armed Forces Officer.</h5>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="./assets/2.png" class="d-block w-100" alt="...">
+        <div class="carousel-caption">
+          <h5>Practice is the key to recommendation</h5>
+          <button class="btn btn-outline-light" type="button" href="#">Practice now</button>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="./assets/3.png" class="d-block w-100" alt="...">
+        <div class="carousel-caption">
+          <h5>Know all about</h5>
+          <p>Services Selection Board</p>
+          <a class="btn" type="button" href="#scroll-target"><svg xmlns="http://www.w3.org/2000/svg" width="30"
+              height="30" fill="white" class="bi bi-arrow-bar-down" viewBox="0 0 16 16">
+              <path fill-rule="evenodd"
+                d="M1 3.5a.5.5 0 0 1 .5-.5h13a.5.5 0 0 1 0 1h-13a.5.5 0 0 1-.5-.5zM8 6a.5.5 0 0 1 .5.5v5.793l2.146-2.147a.5.5 0 0 1 .708.708l-3 3a.5.5 0 0 1-.708 0l-3-3a.5.5 0 0 1 .708-.708L7.5 12.293V6.5A.5.5 0 0 1 8 6z" />
+            </svg>
+          </a>
         </div>
       </div>
     </div>
-  
 
-  
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+
+  <!-- ad -->
+  <div style="width: 250px">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2045560541793123"
+      crossorigin="anonymous"></script>
+    <ins class="adsbygoogle" style="display:block" data-ad-format="fluid" data-ad-layout-key="-6t+ed+2i-1n-4w"
+      data-ad-client="ca-pub-2045560541793123" data-ad-slot="5086285779"></ins>
+    <script>
+      (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+  </div>
+
+  <!-- why SSB Praactice-->
+  <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Why SSB Practice?</h5>
+        <div class="card-text">
+          <p>We believe that the best way to prepare for something is to practice doing it again and again.</p>
+          <p>Our platform helps you prctice the tests that are administered in SSB.</p>
+          <p>Our goal is to provide you with content for these tests in the manner it is given at SSB, so that you can practice the right way.</p>
+        </div>
+        <a href="tests.html" class="btn btn-success">Practice Tests</a>
+      </div>
+  </div>
+  <br>
+  <br>
+
+  <!-- SSB Intro -->
+  <div class="card card-block card-outline-primary">
+    <div class="card-body">
+      <h5 class="card-title">Services Selection Board</h5>
+      <p class="card-text">SSB is the final stage of selection process for Indian Armed Forces. It is a
+        5-day long process which includes Group Tasks, Psychological Tests, Interview and Conference.</p>
+      <a href="about.html" class="btn btn-success pull right">Learn More</a>
+    </div>
+  </div>
+  <br>
+  <br>
+
+  <!-- how to join army-->
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="accordion" id="accordionExample">
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingOne">
+              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne"
+                aria-controls="collapseOne">
+                How to join Indian Army as an officer?
+              </button>
+            </h2>
+            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+              data-bs-parent="#accordionExample">
+              <div class="accordion-body">
+                <!-- after 12th-->
+                <div class="accordion" id="accordionExample1">
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingOne1">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseOne1" aria-controls="collapseOne1">
+                        After 12th
+                      </button>
+                    </h2>
+                    <div id="collapseOne1" class="accordion-collapse collapse" aria-labelledby="headingOne1"
+                      data-bs-parent="#accordionExample1">
+                      <div class="accordion-body">
+                        <!--NDA-->
+                        <div class="accordion" id="accordionExample11">
+                          <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingOne11">
+                              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseOne11" aria-controls="collapseOne11">
+                                National Defence Academy(NDA)
+                              </button>
+                            </h2>
+                            <div id="collapseOne11" class="accordion-collapse collapse" aria-labelledby="headingOne11"
+                              data-bs-parent="#accordionExample11">
+                              <div class="accordion-body">
+
+                                <div class="list-group">
+                                  <a href="#" class="list-group-item list-group-item-action active" aria-current="true">
+                                    National Defence Academy(NDA)
+                                  </a>
+                                  <div class="list-group-item list-group-item-action">
+                                    <p><strong>Vacancies Per Course</strong></p>
+                                    <div>For Men -320 (twice a year)</div>
+                                    <div>Army - 208</div>
+                                    <div>Navy - 42</div>
+                                    <div>Air Force - 70</div>
+                                    <div>For Women - as per Notification</div>
+                                  </div>
+                                  <div class="list-group-item list-group-item-action">
+                                    <p><strong>Age Eligibility</strong></p>
+                                    <div>16 ½ to 19½ yrs as on first day of the month in which course is due to commence
+                                    </div>
+                                  </div>
+                                  <div class="list-group-item list-group-item-action">
+                                    <p><strong>Qualification</strong></p>
+                                    <div>12th Class for Army</div>
+                                    <div>12th Class with Physics and Maths for Air Force and Navy</div>
+                                  </div>
+                                  <div class="list-group-item list-group-item-action">
+                                    <p><strong>Marital Status</strong></p>
+                                    <div>Unmarried</div>
+                                  </div>
+                                  <div class="list-group-item list-group-item-action">
+                                    <p><strong>Selection Process</strong></p>
+                                    <div>Written Exam - conducted by UPSC</div>
+                                    <div>Services Selection Board</div>
+                                  </div>
+                                  <div class="list-group-item list-group-item-action">
+                                    <p><strong>Duration</strong></p>
+                                    <div>3 Yrs at NDA 1 Yr at IMA</div>
+                                  </div>
+                                  <div class="list-group-item list-group-item-action">
+                                    <p><strong>How to apply</strong></p>
+                                    <div>Apply Online on UPSC Website as per dates given in the Notfication in the
+                                      months of
+                                      Jun and Dec.</div>
+                                  </div>
+                                  <div class="list-group-item list-group-item-action">
+                                    <p><strong>Commencement of training</strong></p>
+                                    <div>Jan and Jul</div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <!--NDA-->
+                        <!--10+2 TES-->
+                        <div class="accordion" id="accordionExample12">
+                          <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingOne12">
+                              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseOne12" aria-controls="collapseOne12">
+                                10+2 Technical Entry Scheme (TES)
+                              </button>
+                            </h2>
+                            <div id="collapseOne12" class="accordion-collapse collapse" aria-labelledby="headingOne12"
+                              data-bs-parent="#accordionExample12">
+                              <div class="accordion-body">
+
+                                <div class="list-group">
+                                  <a href="#" class="list-group-item list-group-item-action active" aria-current="true">
+                                    10+2 Technical Entry Scheme (TES)
+                                  </a>
+                                  <div class="list-group-item list-group-item-action">
+                                    <p><strong>Vacancies Per Course</strong></p>
+                                    <div>For Men -90 (twice a year)</div>
+
+                                  </div>
+                                  <div class="list-group-item list-group-item-action">
+                                    <p><strong>Age Eligibility</strong></p>
+                                    <div>16 ½ to 19½ yrs as on first day of the month in which course is due to commence
+                                    </div>
+                                  </div>
+                                  <div class="list-group-item list-group-item-action">
+                                    <p><strong>Qualification</strong></p>
+                                    <div>12th PCM - Aggregate 60%+ and appeared in JEE(Mains) for B.E/B.Tech</div>
+                                  </div>
+                                  <div class="list-group-item list-group-item-action">
+                                    <p><strong>Marital Status</strong></p>
+                                    <div>Unmarried</div>
+                                  </div>
+                                  <div class="list-group-item list-group-item-action">
+                                    <p><strong>Duration</strong></p>
+                                    <div>5 Yrs (1 Yrs OTA GAYA & 4 Yrs CTWS) Permanent Commission after 4 Yrs.
+                                      Phase-I- 01 Year Pre-commissioning Training at OTA Gaya & 03 Years at CME
+                                      Pune/MCTE
+                                      Mhow/MCEME Secunderabad
+                                      Phase-II- 01 Year Post commission training at CME Pune/MCTE Mhow/MCEME
+                                      Secunderabad
+                                    </div>
+                                  </div>
+                                  <div class="list-group-item list-group-item-action">
+                                    <p><strong>How to apply</strong></p>
+                                    <div>Apply online on Official website of DG Rtg www.joinindianarmy.nic.in as
+                                      Notified in
+                                      the Notification.</div>
+                                  </div>
+                                  <div class="list-group-item list-group-item-action">
+                                    <p><strong>Commencement of training</strong></p>
+                                    <div>Jan and Jul</div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <!--10+2 TES-->
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- after 12th-->
+                <!-- after graduation upsc-->
+                <div class="accordion" id="accordionExample2">
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingOne2">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseOne2" aria-controls="collapseOne2">
+                        After Graduation -UPSC
+                      </button>
+                    </h2>
+                    <div id="collapseOne2" class="accordion-collapse collapse" aria-labelledby="headingOne2"
+                      data-bs-parent="#accordionExample2">
+                      <div class="accordion-body">
+                        <!--IMA-->
+                        <div class="accordion" id="accordionExample21">
+                          <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingOne21">
+                              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseOne21" aria-controls="collapseOne22">
+                                Indian Military Academy (IMA)
+                              </button>
+                            </h2>
+                            <div id="collapseOne21" class="accordion-collapse collapse" aria-labelledby="headingOne21"
+                              data-bs-parent="#accordionExample21">
+                              <div class="accordion-body">
+
+                                <div class="list-group">
+                                  <a href="#" class="list-group-item list-group-item-action active" aria-current="true">
+                                    Indian Military Academy (IMA)
+                                  </a>
+                                  <div class="list-group-item list-group-item-action">
+                                    <p><strong>Vacancies Per Course</strong></p>
+                                    <div>For Men -200 (twice a year)</div>
+
+                                  </div>
+                                  <div class="list-group-item list-group-item-action">
+                                    <p><strong>Age Eligibility</strong></p>
+                                    <div>19-24</div>
+                                  </div>
+                                  <div class="list-group-item list-group-item-action">
+                                    <p><strong>Qualification</strong></p>
+                                    <div>Graduation from Recognised University.</div>
+                                  </div>
+                                  <div class="list-group-item list-group-item-action">
+                                    <p><strong>Marital Status</strong></p>
+                                    <div>Unmarried</div>
+                                  </div>
+                                  <div class="list-group-item list-group-item-action">
+                                    <p><strong>Duration</strong></p>
+                                    <div>1 ½ Years</div>
+                                  </div>
+                                  <div class="list-group-item list-group-item-action">
+                                    <p><strong>How to apply</strong></p>
+                                    <div>Apply Online on UPSC Website as per dates given in the Notfication in the
+                                      months of
+                                      Jul and Nov for CDS Exam.</div>
+                                  </div>
+                                  <div class="list-group-item list-group-item-action">
+                                    <p><strong>Commencement of training</strong></p>
+                                    <div>Jan and Jul</div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <!--IMA-->
+                        <!--OTA-->
+                        <div class="accordion" id="accordionExample22">
+                          <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingOne22">
+                              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseOne22" aria-controls="collapseOne22">
+                                Officers Training Academy (OTA)
+                              </button>
+                            </h2>
+                            <div id="collapseOne22" class="accordion-collapse collapse" aria-labelledby="headingOne22"
+                              data-bs-parent="#accordionExample22">
+                              <div class="accordion-body">
+
+                                <div class="list-group">
+                                  <a href="#" class="list-group-item list-group-item-action active" aria-current="true">
+                                    Officers Training Academy (OTA)
+                                  </a>
+                                  <div class="list-group-item list-group-item-action">
+                                    <p><strong>Vacancies Per Course</strong></p>
+                                    <div>For Men - 175 (Twice per year)</div>
+                                    <div>For Women - 12 (Twice per year)</div>
+                                  </div>
+                                  <div class="list-group-item list-group-item-action">
+                                    <p><strong>Age Eligibility</strong></p>
+                                    <div>19-25</div>
+                                  </div>
+                                  <div class="list-group-item list-group-item-action">
+                                    <p><strong>Qualification</strong></p>
+                                    <div>Graduation from Recognised University.</div>
+                                  </div>
+                                  <div class="list-group-item list-group-item-action">
+                                    <p><strong>Marital Status</strong></p>
+                                    <div>Unmarried</div>
+                                  </div>
+                                  <div class="list-group-item list-group-item-action">
+                                    <p><strong>Duration</strong></p>
+                                    <div>49 weeks</div>
+                                  </div>
+                                  <div class="list-group-item list-group-item-action">
+                                    <p><strong>How to apply</strong></p>
+                                    <div>Apply Online on UPSC Website as per dates given in the Notfication in the
+                                      months of
+                                      Jul and Nov for CDS Exam.</div>
+                                  </div>
+                                  <div class="list-group-item list-group-item-action">
+                                    <p><strong>Commencement of training</strong></p>
+                                    <div>Oct and Apr</div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <!--OTA-->
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- after graduation  upsc-->
+                <!-- after graduation non upsc-->
+                <div class="accordion" id="accordionExample3">
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingOne3">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseOne3" aria-controls="collapseOne3">
+                        After Graduation -Non UPSC
+                      </button>
+                    </h2>
+                    <div id="collapseOne3" class="accordion-collapse collapse" aria-labelledby="headingOne3"
+                      data-bs-parent="#accordionExample3">
+                      <div class="accordion-body">
+                        <!--SSC (JAG)-->
+                        <div class="accordion" id="accordionExample31">
+                          <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingOne31">
+                              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseOne31" aria-controls="collapseOne31">
+                                Short Service Comission (JAG)
+                              </button>
+                            </h2>
+                            <div id="collapseOne31" class="accordion-collapse collapse" aria-labelledby="headingOne31"
+                              data-bs-parent="#accordionExample31">
+                              <div class="accordion-body">
+
+                                <div class="list-group">
+                                  <a href="#" class="list-group-item list-group-item-action active" aria-current="true">
+                                    Short Service Comission (JAG)
+                                  </a>
+                                  <div class="list-group-item list-group-item-action">
+                                    <p><strong>Vacancies Per Course</strong></p>
+                                    <div>For men - 10(As Notified)(Twice a year)</div>
+                                    <div>For Women - 4 (Twice a year)</div>
+                                  </div>
+                                  <div class="list-group-item list-group-item-action">
+                                    <p><strong>Age Eligibility</strong></p>
+                                    <div>21-27</div>
+                                  </div>
+                                  <div class="list-group-item list-group-item-action">
+                                    <p><strong>Qualification</strong></p>
+                                    <div>Graduate with LLB with 55% marks. Eligible for Registration with Bar Council of
+                                      India
+                                      / State.</div>
+                                  </div>
+                                  <div class="list-group-item list-group-item-action">
+                                    <p><strong>Marital Status</strong></p>
+                                    <div>Unmarried</div>
+                                  </div>
+                                  <div class="list-group-item list-group-item-action">
+                                    <p><strong>Training Academy</strong></p>
+                                    <div>OTA, Chennai</div>
+                                  </div>
+                                  <div class="list-group-item list-group-item-action">
+                                    <p><strong>Duration</strong></p>
+                                    <div>49 weeks</div>
+                                  </div>
+                                  <div class="list-group-item list-group-item-action">
+                                    <p><strong>How to apply</strong></p>
+                                    <div>Apply online on Official website of DG Rtg www.joinindianarmy.nic.in as
+                                      Notified in
+                                      the Notification.</div>
+                                  </div>
+                                  <div class="list-group-item list-group-item-action">
+                                    <p><strong>Commencement of training</strong></p>
+                                    <div>Oct and Apr</div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <!--SSC JAG-->
+                        <!--ssc ncc-->
+                        <div class="accordion" id="accordionExample32">
+                          <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingOne32">
+                              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseOne32" aria-controls="collapseOne32">
+                                Short Service Comission (NCC)
+                              </button>
+                            </h2>
+                            <div id="collapseOne32" class="accordion-collapse collapse" aria-labelledby="headingOne32"
+                              data-bs-parent="#accordionExample32">
+                              <div class="accordion-body">
+
+                                <div class="list-group">
+                                  <a href="#" class="list-group-item list-group-item-action active" aria-current="true">
+                                    Short Service Comission (NCC)
+                                  </a>
+                                  <div class="list-group-item list-group-item-action">
+                                    <p><strong>Vacancies Per Course</strong></p>
+                                    <div>For men - 50(Twice a year)</div>
+                                    <div>For Women - 4 (Twice a year)</div>
+                                  </div>
+                                  <div class="list-group-item list-group-item-action">
+                                    <p><strong>Age Eligibility</strong></p>
+                                    <div>19-25</div>
+                                  </div>
+                                  <div class="list-group-item list-group-item-action">
+                                    <p><strong>Qualification</strong></p>
+                                    <div>Graduate with 50% Aggregate marks, 2/3 Years service in NCC Senior Div Army
+                                      with
+                                      minimum 'B' Grade in 'C' Certificate Exam</div>
+                                  </div>
+                                  <div class="list-group-item list-group-item-action">
+                                    <p><strong>Marital Status</strong></p>
+                                    <div>Unmarried</div>
+                                  </div>
+                                  <div class="list-group-item list-group-item-action">
+                                    <p><strong>Training Academy</strong></p>
+                                    <div>OTA, Chennai</div>
+                                  </div>
+                                  <div class="list-group-item list-group-item-action">
+                                    <p><strong>Duration</strong></p>
+                                    <div>49 weeks</div>
+                                  </div>
+                                  <div class="list-group-item list-group-item-action">
+                                    <p><strong>How to apply</strong></p>
+                                    <div>Apply offline as Notified in the Notification through NCC Dte</div>
+                                  </div>
+                                  <div class="list-group-item list-group-item-action">
+                                    <p><strong>Commencement of training</strong></p>
+                                    <div>Oct and Apr</div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <!--ssc ncc-->
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- after graduation non upsc-->
+                <!-- Graduate Technical Entries-->
+                <div class="accordion" id="accordionExample33">
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingOne33">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseOne33" aria-controls="collapseOne33">
+                        Graduate Technical Entries
+                      </button>
+                    </h2>
+                    <div id="collapseOne33" class="accordion-collapse collapse" aria-labelledby="headingOne33"
+                      data-bs-parent="#accordionExample33">
+                      <div class="accordion-body">
+                        <!--University Entry Scheme-->
+                        <div class="accordion" id="accordionExample34">
+                          <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingOne34">
+                              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseOne34" aria-controls="collapseOne34">
+                                University Entry Scheme
+                              </button>
+                            </h2>
+                            <div id="collapseOne34" class="accordion-collapse collapse" aria-labelledby="headingOne34"
+                              data-bs-parent="#accordionExample34">
+                              <div class="accordion-body">
+
+                                <div class="list-group">
+                                  <a href="#" class="list-group-item list-group-item-action active" aria-current="true">
+                                    University Entry Scheme
+                                  </a>
+                                  <div class="list-group-item list-group-item-action">
+                                    <p><strong>Vacancies Per Course</strong></p>
+                                    <div>For Men - 60 (As Notified) (Once a Year)</div>
+
+                                  </div>
+                                  <div class="list-group-item list-group-item-action">
+                                    <p><strong>Age Eligibility</strong></p>
+                                    <div>18-24</div>
+                                  </div>
+                                  <div class="list-group-item list-group-item-action">
+                                    <p><strong>Qualification</strong></p>
+                                    <div>Pre Final year students of Notified Engineering Streams</div>
+                                  </div>
+                                  <div class="list-group-item list-group-item-action">
+                                    <p><strong>Marital Status</strong></p>
+                                    <div>Unmarried</div>
+                                  </div>
+                                  <div class="list-group-item list-group-item-action">
+                                    <p><strong>Training Academy</strong></p>
+                                    <div>IMA, Dehradun</div>
+                                  </div>
+                                  <div class="list-group-item list-group-item-action">
+                                    <p><strong>Duration</strong></p>
+                                    <div>One Year</div>
+                                  </div>
+                                  <div class="list-group-item list-group-item-action">
+                                    <p><strong>How to apply</strong></p>
+                                    <div>Apply online on Official website of DG Rtg <a
+                                        href="https://joinindianarmy.nic.in">www.joinindianarmy.nic.in</a> as Notified
+                                      in the
+                                      Notification.</div>
+                                  </div>
+                                  <div class="list-group-item list-group-item-action">
+                                    <p><strong>Commencement of training</strong></p>
+                                    <div>Jul</div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <!--University Entry Scheme-->
+                        <!--TGC (Engineers)-->
+                        <div class="accordion" id="accordionExample35">
+                          <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingOne35">
+                              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseOne35" aria-controls="collapseOne35">
+                                TGC (Engineers)
+                              </button>
+                            </h2>
+                            <div id="collapseOne35" class="accordion-collapse collapse" aria-labelledby="headingOne35"
+                              data-bs-parent="#accordionExample35">
+                              <div class="accordion-body">
+
+                                <div class="list-group">
+                                  <a href="#" class="list-group-item list-group-item-action active" aria-current="true">
+                                    TGC (Engineers)
+                                  </a>
+                                  <div class="list-group-item list-group-item-action">
+                                    <p><strong>Vacancies Per Course</strong></p>
+                                    <div>For Men - 60 (As Notified) (Twice a Year)</div>
+
+                                  </div>
+                                  <div class="list-group-item list-group-item-action">
+                                    <p><strong>Age Eligibility</strong></p>
+                                    <div>20-27</div>
+                                  </div>
+                                  <div class="list-group-item list-group-item-action">
+                                    <p><strong>Qualification</strong></p>
+                                    <div>BE / B Tech in notified streams of Engineering</div>
+                                  </div>
+                                  <div class="list-group-item list-group-item-action">
+                                    <p><strong>Marital Status</strong></p>
+                                    <div>Unmarried</div>
+                                  </div>
+                                  <div class="list-group-item list-group-item-action">
+                                    <p><strong>Training Academy</strong></p>
+                                    <div>IMA, Dehradun</div>
+                                  </div>
+                                  <div class="list-group-item list-group-item-action">
+                                    <p><strong>Duration</strong></p>
+                                    <div>One Year</div>
+                                  </div>
+                                  <div class="list-group-item list-group-item-action">
+                                    <p><strong>How to apply</strong></p>
+                                    <div>Apply online on Official website of DG Rtg <a
+                                        href="https://joinindianarmy.nic.in">www.joinindianarmy.nic.in</a> as Notified
+                                      in the
+                                      Notification.</div>
+                                  </div>
+                                  <div class="list-group-item list-group-item-action">
+                                    <p><strong>Commencement of training</strong></p>
+                                    <div>Jan and Jul</div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <!--TGC (Engineers)-->
+                        <!--Short Service Comission Tech-->
+                        <div class="accordion" id="accordionExample36">
+                          <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingOne36">
+                              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseOne36" aria-controls="collapseOne36">
+                                Short Service Comission Tech
+                              </button>
+                            </h2>
+                            <div id="collapseOne36" class="accordion-collapse collapse" aria-labelledby="headingOne36"
+                              data-bs-parent="#accordionExample36">
+                              <div class="accordion-body">
+
+                                <div class="list-group">
+                                  <a href="#" class="list-group-item list-group-item-action active" aria-current="true">
+                                    Short Service Comission Tech
+                                  </a>
+                                  <div class="list-group-item list-group-item-action">
+                                    <p><strong>Vacancies Per Course</strong></p>
+                                    <div>For Men - 100 (As Notified) (Twice a Year)</div>
+                                    <div>For Women - 20 (As Notified) (Twice a Year)</div>
+                                  </div>
+                                  <div class="list-group-item list-group-item-action">
+                                    <p><strong>Age Eligibility</strong></p>
+                                    <div>20-27</div>
+                                  </div>
+                                  <div class="list-group-item list-group-item-action">
+                                    <p><strong>Qualification</strong></p>
+                                    <div>Engineering Degree in notified stream. </div>
+                                  </div>
+                                  <div class="list-group-item list-group-item-action">
+                                    <p><strong>Marital Status</strong></p>
+                                    <div>Unmarried</div>
+                                  </div>
+                                  <div class="list-group-item list-group-item-action">
+                                    <p><strong>Training Academy</strong></p>
+                                    <div>OTA, CHennai</div>
+                                  </div>
+                                  <div class="list-group-item list-group-item-action">
+                                    <p><strong>Duration</strong></p>
+                                    <div>49 weeks</div>
+                                  </div>
+                                  <div class="list-group-item list-group-item-action">
+                                    <p><strong>How to apply</strong></p>
+                                    <div>Apply online on Official website of DG Rtg <a
+                                        href="https://joinindianarmy.nic.in">www.joinindianarmy.nic.in</a> as Notified
+                                      in the
+                                      Notification.</div>
+                                  </div>
+                                  <div class="list-group-item list-group-item-action">
+                                    <p><strong>Commencement of training</strong></p>
+                                    <div>Apr and Oct</div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <!--Short Service Comission Tech-->
+                        <!-- AEC (Men)-->
+                        <div class="accordion" id="accordionExample37">
+                          <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingOne37">
+                              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseOne37" aria-controls="collapseOne37">
+                                AEC (Men)
+                              </button>
+                            </h2>
+                            <div id="collapseOne37" class="accordion-collapse collapse" aria-labelledby="headingOne37"
+                              data-bs-parent="#accordionExample37">
+                              <div class="accordion-body">
+
+                                <div class="list-group">
+                                  <a href="#" class="list-group-item list-group-item-action active" aria-current="true">
+                                    AEC (Men)
+                                  </a>
+                                  <div class="list-group-item list-group-item-action">
+                                    <p><strong>Vacancies Per Course</strong></p>
+                                    <div>For Men - 20 (As Notified) (Twice a Year)</div>
+                                  </div>
+                                  <div class="list-group-item list-group-item-action">
+                                    <p><strong>Age Eligibility</strong></p>
+                                    <div>23-27</div>
+                                  </div>
+                                  <div class="list-group-item list-group-item-action">
+                                    <p><strong>Qualification</strong></p>
+                                    <div>MA / MSc in 1st or 2nd division in notified subjects from recognised
+                                      university.
+                                    </div>
+                                  </div>
+                                  <div class="list-group-item list-group-item-action">
+                                    <p><strong>Marital Status</strong></p>
+                                    <div>Married and Un Married</div>
+                                  </div>
+                                  <div class="list-group-item list-group-item-action">
+                                    <p><strong>Training Academy</strong></p>
+                                    <div>IMA, Dehradun</div>
+                                  </div>
+                                  <div class="list-group-item list-group-item-action">
+                                    <p><strong>Duration</strong></p>
+                                    <div>One Year</div>
+                                  </div>
+                                  <div class="list-group-item list-group-item-action">
+                                    <p><strong>How to apply</strong></p>
+                                    <div>Apply online on Official website of DG Rtg <a
+                                        href="https://joinindianarmy.nic.in">www.joinindianarmy.nic.in</a> as Notified
+                                      in the
+                                      Notification.</div>
+                                  </div>
+                                  <div class="list-group-item list-group-item-action">
+                                    <p><strong>Commencement of training</strong></p>
+                                    <div>Jan and Jul</div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <!--AEC (Men)-->
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Graduate Technical Entries-->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- how to join navy-->
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="accordion" id="accordionExample38">
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingOne38">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapseOne38" aria-controls="collapseOne38">
+                How to Join Indian Navy as an officer?
+              </button>
+            </h2>
+            <div id="collapseOne38" class="accordion-collapse collapse" aria-labelledby="headingOne38"
+              data-bs-parent="#accordionExample38">
+              <div class="accordion-body">
+                <p>To be updated shortly</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+
+  <!-- how to join airforce-->
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="accordion" id="accordionExample39">
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingOne39">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapseOne39" aria-controls="collapseOne39">
+                How to Join Indian Airforce as an officer?
+              </button>
+            </h2>
+            <div id="collapseOne39" class="accordion-collapse collapse" aria-labelledby="headingOne39"
+              data-bs-parent="#accordionExample39">
+              <div class="accordion-body">
+                <p>To be updated shortly</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <br>
+  <br>
+
+  <!-- ad -->
+  <div style="width: 250px">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2045560541793123"
+      crossorigin="anonymous"></script>
+    <ins class="adsbygoogle" style="display:block" data-ad-format="fluid" data-ad-layout-key="-6t+ed+2i-1n-4w"
+      data-ad-client="ca-pub-2045560541793123" data-ad-slot="5086285779"></ins>
+    <script>
+      (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+  </div>  
+
+  <!-- navbar with copright-->
+  <nav class="navbar navbar-dark bg-dark" style="margin-top: 5rem">
+    <div class="container-fluid">
+      <div class="navbar-nav">
+        <a class="nav-link active" aria-current="page" href="#">© 2022 SSB Practice</a>
+      </div>
+    </div>
+  </nav>
+
 </body>
+
 </html>

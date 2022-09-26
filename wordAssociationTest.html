@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-202497702-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-202497702-1');
+  </script>
+  <!--bootstrap-->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+    crossorigin="anonymous"></script>
+  <meta name="viewport" content="width=device-width" initial-scale="1.0">
+  <meta charset="UTF-8">
+  <title>SSB Practice- WAT</title>
+  <script src="./scripts/watFetch.js"></script>
+</head>
+
+<body>
+  <!--navbar-->
+  <nav class="navbar navbar-dark" id="nav" style="background-color: #3a3a2d;">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="index.html">SSB Practice</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+        aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="tests.html">Practice Tests</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">About SSB</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="blog.html">Blog</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="ca.html">Current Affairs</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- card with instructions and start button-->
+  <div class="card card-block card-outline-primary" style="margin-top: 6rem;" id="instruction">
+    <div class="card-body">
+      <h5 class="card-title">Instructions - WAT</h5>
+      <div class="card-text">
+        <ul>
+          <Strong>Prerequisites</strong>
+          <li>Two sheets of paper</li>
+          <li>Pen</li>
+          <li>15 minutes time</li>
+          <Strong>Instructions</strong>
+          <li>60 words will be flashed on the screen one after the other.</li>
+          <li> Each word will be flashed for 15 seconds</li>
+          <li>You have the see the word and write down the first sentence that comes to your mind in 15 seconds.</li>
+          <li>After 15 seconds, the next word will be flashed.</li>
+          <li>Do this for all 60 words.</li>
+          <li>Try to attempt as many as possible.</li>
+          <li>After completion of the test go through your answers and take your time to think if you could have made a
+            better sentence and write it down next to it.</li>
+          <li>After completion of the test, you can reattempt the test, or practice other tests.</li>
+        </ul>
+      </div>
+      <button type="button" class="btn btn-success" onclick="startTest()">Start Test</button>
+    </div>
+  </div>
+
+  <!-- card with the test-->
+  <div class="card card-block text-center mx-auto" id="word" style="display: none; margin-top: 30vh;">
+    <div class="card-body">
+      <h1 class="card-title" id="h5"></h1>
+
+    </div>
+    <div class="card-footer bg-light">
+      <!--timer-->
+      <div class="progress" style="margin-top: 5vh; margin-left: 2vh; margin-right: 2vh; height: 3px;" id="progress">
+        <div class="progress-bar bg-success" id="progressbar" role="progressbar" aria-label="Success striped example"
+          aria-valuemin="0" aria-valuemax="100"></div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- card with finish message and reattempt and back buttons-->
+  <div class="card card-block" id="test-finish" style="display: none;margin-top: 30vh">
+    <div class="card-body">
+      <h5 class="card-title">Test Finished</h5>
+      <div class="card-text">
+        <p>Thank you for completing the test.</p>
+        <p>Go through your answers and take your time to think if you could have made a better sentence and write it
+          down next to it.</p>
+      </div>
+      <button type="button" class="btn btn-success" onclick="startTest()">Reattempt</button>
+      <a type="button" class="btn btn-success" href="tests.html">Back</a>
+    </div>
+  </div>
+
+
+  <audio id="audio">
+    <source src="https://www.soundjay.com/mechanical/sounds/camera-shutter-click-03.mp3" type="audio/mpeg">
+    Your Browser does not support the audio element.
+  </audio>
+
+
+</body>
+
+</html>
