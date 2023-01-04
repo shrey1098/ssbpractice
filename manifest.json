@@ -1,0 +1,18 @@
+{
+  "background_color": "#ffffff",
+  "description": "Practice Services Selection Board Tests in real time and achieve your dream of becoming an armed forces officer.",
+  "dir": "ltr",
+  "display": "standalone",
+  "name": "SSB Practice",
+  "orientation": "landscape",
+  "scope": "/",
+  "short_name": "SSB Practice",
+  "start_url": "/",
+  "theme_color": "#ffffff",
+  "categories": [
+    "education"
+  ],
+  "screenshots": [],
+  "icons": [],
+  "shortcuts": []
+}
