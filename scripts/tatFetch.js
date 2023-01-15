@@ -1,6 +1,6 @@
 var audio
 async function fetchTat() {
-    const response = await fetch('http://13.233.212.35/tat');
+    const response = await fetch('https://13.233.212.35/tat');
     const data = await response.json();
     return data;
 }
