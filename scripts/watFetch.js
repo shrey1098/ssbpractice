@@ -1,6 +1,6 @@
 var audio;
 async function fetchwat() {
-    const response = await fetch('https://13.233.212.35/wat');
+    const response = await fetch('http://13.233.212.35/wat');
     const data = await response.json();
     return data;
 
