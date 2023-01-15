@@ -1,5 +1,5 @@
 async function srtfetch(){
-    const response = await fetch('https://13.233.212.35/srt');
+    const response = await fetch('https://ec2-13-233-212-35.ap-south-1.compute.amazonaws.com/srt');
     const data = await response.json();
     
     return data;
